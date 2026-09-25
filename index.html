@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SI Hive: Superintelligence Hive</title>
+  <meta name="description" content="SI Hive is a local dashboard for Claude Code, Codex and Gemini CLI. Run AI sessions in parallel, see which ones need you, and turn repeat work into workflows, on your own machine.">
+  <link rel="canonical" href="https://superintelligencehive.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="SI Hive: Superintelligence Hive">
+  <meta property="og:description" content="Run every AI agent from one place, on your own machine.">
+  <meta property="og:image" content="https://superintelligencehive.com/assets/terminal-grid.png">
+  <meta property="og:url" content="https://superintelligencehive.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="SI Hive home">
+      <img src="favicon.svg" alt="" width="26" height="26">
+      <span>SI Hive</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#what">What it does</a>
+      <a href="#tour">Tour</a>
+      <a href="#local">Local by design</a>
+      <a class="nav-cta" href="https://github.com/lonexa/hive">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="kicker">Superintelligence Hive</p>
+        <h1>Run every AI agent from one place.</h1>
+        <p class="lede">SI Hive is a dashboard that runs on your machine and drives Claude Code, Codex and Gemini CLI for you. Launch sessions side by side, see at a glance which one is waiting on you, and turn the work you repeat into workflows.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/lonexa/hive">Get SI Hive on GitHub</a>
+          <a class="btn btn-quiet" href="#tour">Take the tour</a>
+        </div>
+        <p class="fineprint">Free and local. Uses the AI tools and logins you already have. Windows and macOS.</p>
+      </div>
+
+      <div class="hive-grid" aria-label="Animated example: four AI agents working in parallel">
+        <article class="pane" data-state="working">
+          <header><span class="dot"></span><strong>storefront</strong><em class="chip">Working</em></header>
+          <pre data-lines="&gt; Add a promo-code field to checkout
+  Reading src/pages/Checkout.tsx
+  Writing PromoCodeForm.tsx
+  Running vitest: 14 passed"></pre>
+        </article>
+        <article class="pane" data-state="working">
+          <header><span class="dot"></span><strong>payments</strong><em class="chip">Working</em></header>
+          <pre data-lines="&gt; Add rate limiting to refunds
+  Editing src/routes/refunds.ts
+  Writing rateLimit.ts
+  Ready to push the branch" data-needs="Push to origin? (y/n)"></pre>
+        </article>
+        <article class="pane" data-state="working">
+          <header><span class="dot"></span><strong>analytics</strong><em class="chip">Working</em></header>
+          <pre data-lines="&gt; Add a monthly revenue rollup
+  Reading pipeline/orders.py
+  Adding monthly_revenue()
+  pytest: 6 passed"></pre>
+        </article>
+        <article class="pane" data-state="working">
+          <header><span class="dot"></span><strong>infra</strong><em class="chip">Working</em></header>
+          <pre data-lines="&gt; Autoscale production on CPU
+  Reading envs/staging/main.tf
+  Writing envs/production/scaling.tf
+  terraform validate: success"></pre>
+        </article>
+        <div class="toast" role="status" aria-live="polite" hidden>
+          <strong>payments needs you</strong>
+          <span>Approve the push, or reply from any screen.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="what" id="what" aria-labelledby="what-title">
+      <h2 id="what-title">One home for all of your AI work</h2>
+      <p class="section-lede">Whether you write code, research, analyze data or run a team, SI Hive keeps every session, project and workflow in one window, and picks up exactly where you left off.</p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Run many sessions at once</h3>
+          <p>A terminal grid of live agents across all your projects. A board sorts every session into working, needs you and done, so nothing sits waiting on an answer you never saw.</p>
+        </div>
+        <div class="pillar">
+          <h3>Come back to anything</h3>
+          <p>Every session, prompt and project stays searchable. Reopen a conversation from last week, replay what an agent did, or queue the next prompt to send the moment it finishes.</p>
+        </div>
+        <div class="pillar">
+          <h3>Teach it your standards</h3>
+          <p>Manage the skills, agents, hooks, plugins and permissions your AI tools use. Require skills for a repo so every session follows the same rules, and share them with the whole team.</p>
+        </div>
+        <div class="pillar">
+          <h3>Take work from ticket to done</h3>
+          <p>Connect GitHub, GitLab, Azure DevOps, Jira or Linear. Open a ticket, start an AI session primed with its details, get an AI review on the pull request, and follow CI in one place.</p>
+        </div>
+        <div class="pillar">
+          <h3>Automate the rest</h3>
+          <p>Describe a workflow in plain English, or start from a template. Schedules, loops and monitors run on their own and report to Slack, Google Chat or email.</p>
+        </div>
+        <div class="pillar">
+          <h3>Grow into a team tool</h3>
+          <p>Turn on sign-in and a shared database when you are ready. Hand a session to a teammate, see what everyone is running, and track time and usage without extra tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour" id="tour" aria-labelledby="tour-title">
+      <h2 id="tour-title">A look inside</h2>
+
+      <figure class="shot shot-wide">
+        <img src="assets/terminal-grid.png" alt="SI Hive terminal grid with four Claude Code agents working on different projects" loading="lazy" width="1440" height="900">
+        <figcaption><strong>Terminal grid.</strong> Four agents, four projects, one screen. Each pane is a real Claude Code session you can type into.</figcaption>
+      </figure>
+
+      <div class="shot-row">
+        <figure class="shot">
+          <img src="assets/sessions.png" alt="Session board sorting sessions into Working, Needs You and Completed" loading="lazy" width="1440" height="900">
+          <figcaption><strong>Session board.</strong> See what every agent is doing right now, and which one is waiting for you.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/dashboard.png" alt="Dashboard showing live sessions and attention status" loading="lazy" width="1440" height="900">
+          <figcaption><strong>Dashboard.</strong> Live sessions and anything that needs your attention, the moment you open it.</figcaption>
+        </figure>
+      </div>
+
+      <div class="shot-row">
+        <figure class="shot">
+          <img src="assets/skills.png" alt="AI Studio skills manager listing custom skills" loading="lazy" width="1440" height="900">
+          <figcaption><strong>AI Studio.</strong> Skills, agents, hooks, plugins and permissions, managed in one place.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/community-skills.png" alt="Community marketplace panel for installing skills" loading="lazy" width="1440" height="900">
+          <figcaption><strong>Community marketplace.</strong> Browse and install hundreds of community skills, agents and plugins.</figcaption>
+        </figure>
+      </div>
+
+      <div class="shot-row">
+        <figure class="shot">
+          <img src="assets/workflows.png" alt="Workflow Studio with templates and automations" loading="lazy" width="1440" height="900">
+          <figcaption><strong>Workflow Studio.</strong> Automations from templates or from a sentence describing what you want.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/history.png" alt="Prompt history grouped by day and project" loading="lazy" width="1440" height="900">
+          <figcaption><strong>History.</strong> Every prompt you have sent, searchable and filterable by project.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="local" id="local" aria-labelledby="local-title">
+      <div class="local-inner">
+        <h2 id="local-title">Local by design</h2>
+        <div class="local-cols">
+          <p>SI Hive runs on your computer and drives the official command-line tools in real terminals. Your code stays on your machine, and your AI sessions run on your own Claude, Codex or Gemini subscription, exactly as they would if you typed the commands yourself.</p>
+          <ul>
+            <li>No cloud service in the middle, and no account with us</li>
+            <li>Works with the logins you already have</li>
+            <li>Secrets encrypted on disk</li>
+            <li>Team features use your own database when you turn them on</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="works-with" aria-labelledby="works-title">
+      <h2 id="works-title">Works with the tools you use</h2>
+      <dl>
+        <div><dt>AI tools</dt><dd>Claude Code, Codex CLI, Gemini CLI</dd></div>
+        <div><dt>Code and tickets</dt><dd>GitHub, GitLab, Azure DevOps, Jira, Linear</dd></div>
+        <div><dt>Notifications</dt><dd>Slack, Google Chat, email, webhooks, desktop alerts</dd></div>
+        <div><dt>Runs on</dt><dd>Windows and macOS</dd></div>
+      </dl>
+      <a class="btn btn-primary" href="https://github.com/lonexa/hive">Get SI Hive on GitHub</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>SI Hive</strong>, the Superintelligence Hive. Made by Lonexa.</p>
+    <p class="footer-small">Claude Code, Codex and Gemini are trademarks of their respective owners. SI Hive is independent and not affiliated with Anthropic, OpenAI or Google.</p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
